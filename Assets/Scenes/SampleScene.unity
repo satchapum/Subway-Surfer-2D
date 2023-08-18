@@ -254,12 +254,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9330bfedc7660bd49bd2dfeb4dbe3148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerLeft: {fileID: 0}
-  spawnerMiddle: {fileID: 0}
-  spawnerRight: {fileID: 0}
-  fencePrefab: {fileID: 0}
-  trainPrefab: {fileID: 0}
-  coinsPrefab: {fileID: 0}
+  spawnerLeft: {fileID: 2007833314}
+  spawnerMiddle: {fileID: 1977263091}
+  spawnerRight: {fileID: 619579662}
+  fencePrefab: {fileID: 6252133284434009795, guid: 535f80aeefab53041aaec2916694b52c, type: 3}
+  trainPrefab: {fileID: 5205997613487392648, guid: 67a12084e08499d418c6247a99b9c7b8, type: 3}
+  coinsPrefab: {fileID: 7035443980386503697, guid: ef3d8a3bcf3d7f5468be9cf6eaf8bf19, type: 3}
   delay: 0
 --- !u!1 &378761652
 GameObject:
@@ -433,6 +433,7 @@ GameObject:
   - component: {fileID: 557643732}
   - component: {fileID: 557643731}
   - component: {fileID: 557643735}
+  - component: {fileID: 557643736}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -569,6 +570,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &557643736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557643730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c61183e2e2d7f408e568c3f18aec41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetleft: {fileID: 1689678553}
+  targetmiddle: {fileID: 1854699922}
+  targetright: {fileID: 604360437}
+  speed: 10
 --- !u!1 &604360435
 GameObject:
   m_ObjectHideFlags: 0
