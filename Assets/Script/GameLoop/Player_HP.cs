@@ -15,6 +15,7 @@ public class Player_HP : MonoBehaviour
     void Start()
     {
         HealthUI();
+        CoinScoreUI();
     }
 
     // Update is called once per frame
@@ -32,6 +33,13 @@ public class Player_HP : MonoBehaviour
         }
 
         HealthUI();
+    }
+
+    public void GetCoins()
+    {
+        coinScore = coinScore + 5;
+
+        CoinScoreUI();
     }
 
     void HealthUI()
