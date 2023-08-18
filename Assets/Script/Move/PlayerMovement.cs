@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform targetleft;
+    public Transform targetmiddle;
+    public Transform targetright;
+    private float current;
+    
     void Start()
     {
-        
+        current = 0;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
