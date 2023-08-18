@@ -19,6 +19,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void ObstructionSpawn()
     {
+        Delay = Random.Range(0.5f, 1.5f);
         float ObstructionRandom = Random.Range(1,3);
         float PositionRandom = Random.Range(1, 4);
         Debug.Log(ObstructionRandom);
