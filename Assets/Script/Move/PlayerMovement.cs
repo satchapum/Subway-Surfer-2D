@@ -7,38 +7,44 @@ public class PlayerMovement : MonoBehaviour
     public Transform targetleft;
     public Transform targetmiddle;
     public Transform targetright;
-    private float current;
     public float speed;
+    private float currentLine;
+    private Vector3 targetPosition;
 
-    private void Start()
+    void Start()
     {
-        current = 0;
+        targetPosition = targetmiddle.position;
+        currentLine = 0;
     }
 
-    private void Update()
+    void Update()
     {
-        
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            current = Mathf.Clamp(current - 1, -1, 1);
+            if (currentLine == 0)
+            {
+                targetPosition = targetleft.position;
+                currentLine--;
+            }
+            else if (currentLine == 1)
+            {
+                targetPosition = targetmiddle.position;
+                currentLine--;
+            }
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            current = Mathf.Clamp(current + 1, -1, 1);
+            if (currentLine == 0)
+            {
+                targetPosition = targetright.position;
+                currentLine++;
+            }
+            else if (currentLine == -1)
+            {
+                targetPosition = targetmiddle.position;
+                currentLine++;
+            }
         }
-
-        
-        Vector3 targetPosition = targetmiddle.position;
-        if (current == -1)
-        {
-            targetPosition = targetleft.position;
-        }
-        else if (current == 1)
-        {
-            targetPosition = targetright.position;
-        }
-
-        
-        transform.position = Vector3.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
 }
