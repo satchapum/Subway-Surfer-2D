@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public bool left = false;
+    public bool right = false;
     public Transform targetleft;
     public Transform targetmiddle;
     public Transform targetright;
     public float speed;
-    private float currentLine;
-    private Vector3 targetPosition;
+    public float currentLine;
+    public Vector3 targetPosition;
     private Collider2D playerCollider;
     private SpriteRenderer playerJumpColor;
 
@@ -41,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 targetPosition = targetmiddle.position;
                 currentLine--;
+                right = true;
             }
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -54,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 targetPosition = targetmiddle.position;
                 currentLine++;
+                left = true;
             }
         }
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
