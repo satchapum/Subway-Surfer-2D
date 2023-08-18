@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2201361727691184615}
   - component: {fileID: 678870112068053518}
   - component: {fileID: 6356743154020905390}
+  - component: {fileID: 9213997163113695816}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -163,3 +164,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinSpeed: 5
   rb: {fileID: 678870112068053518}
+--- !u!114 &9213997163113695816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7035443980386503697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca131303f8ca3840991a618a9bf553a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

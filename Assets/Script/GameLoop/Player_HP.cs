@@ -9,6 +9,8 @@ public class Player_HP : MonoBehaviour
     public GameObject Player;
     public int playerHealth = 5;
     public TMP_Text HPText;
+    public int coinScore = 0;
+    public TMP_Text scoreText;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,5 +37,10 @@ public class Player_HP : MonoBehaviour
     void HealthUI()
     {
         HPText.text = "Life :" + playerHealth;
+    }
+
+    void CoinScoreUI() 
+    {
+        scoreText.text = "Coin :" + coinScore;
     }
 }
