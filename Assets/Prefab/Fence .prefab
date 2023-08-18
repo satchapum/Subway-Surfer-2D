@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6395104268262371547}
   - component: {fileID: 708382927379914231}
   - component: {fileID: 4257174438406698167}
+  - component: {fileID: -6178198695475959056}
   m_Layer: 0
   m_Name: 'Fence '
-  m_TagString: Untagged
+  m_TagString: Fence
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,3 +174,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!114 &-6178198695475959056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6252133284434009795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a1077b3c0bd42409b78c49fab63e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
