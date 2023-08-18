@@ -10,13 +10,24 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     private float currentLine;
     private Vector3 targetPosition;
+    private Collider2D playerCollider;
+    private SpriteRenderer playerJumpColor;
 
     void Start()
     {
+        playerCollider = GetComponent<Collider2D>();
+        playerJumpColor = GetComponent<SpriteRenderer>();
         targetPosition = targetmiddle.position;
         currentLine = 0;
     }
-
+    IEnumerator Jump()
+    {
+        playerCollider.enabled = false;
+        playerJumpColor.color = Color.magenta;
+        yield return new WaitForSeconds(0.5f);
+        playerCollider.enabled = true;
+        playerJumpColor.color = Color.white;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -45,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
                 currentLine++;
             }
         }
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
+            StartCoroutine("Jump");
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
 }
