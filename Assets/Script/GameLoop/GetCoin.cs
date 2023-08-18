@@ -21,6 +21,7 @@ public class GetCoin : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            collision.gameObject.GetComponent<Player_HP>().GetCoins();
             Destroy(this.gameObject);
         }
     }
